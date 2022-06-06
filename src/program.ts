@@ -65,6 +65,7 @@ type WithdrawVaultParams = {
 };
 
 type CreateVaultUserTicketParams = {
+  userSigner: web3.PublicKey;
   userTicketAccountOwner: web3.PublicKey;
 };
 
@@ -308,7 +309,7 @@ export class StrategyProgram extends TokenProgram {
     return this.methods
       .createVaultUserTicketAccount()
       .accounts({
-        userSigner: this.user,
+        userSigner: params.userSigner,
         userTicketAccountOwner: params.userTicketAccountOwner,
         vaultUserTicketAccount,
         vaultAccount: vaultKeys.vaultAccount,
