@@ -627,6 +627,14 @@
         "mSOL": "Haf8bnUw9nVEN65P5PtRJ9D4cTfxCGAFgopVaKoXPfA8",
         "soETH": "7xehPx6aykoqY1ybqZrMAeCpCvNXqQrHfaF9L7hhM9Yq",
         "stSOL": "8MX2ko4tM7FntxM7Zunssn5ZFb4sazAb6tU3LWM56eVd"
+      },
+      "vaultTicketMintPubkey":{
+        "WSOL":"2FFC6VZjKpArLErNSvufMcChbQ6jFE67EqoRG5a1K5wa",
+        "USDC":"Hw45vdzDzbv3wPnHwXysic3cXohUYiX7sdkbLB2naJPb"
+      },
+      "vaultLpTokenAccount":{
+        "WSOL":"GZymCgrqzeEwzYCv8ggiVB6XfzricaqPZQry6UiyhM7U",
+        "USDC":"4H8bNrGVZ3qCHqmuKUREx19iDvykndUELoD2Mpdb2wgb"
       }
     }
   }
