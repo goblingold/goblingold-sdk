@@ -12,6 +12,7 @@ import { MethodsBuilder } from "@project-serum/anchor/dist/cjs/program/namespace
 import {
   ASSOCIATED_TOKEN_PROGRAM_ID,
   TOKEN_PROGRAM_ID,
+  createAssociatedTokenAccountInstruction,
   getAssociatedTokenAddress,
 } from "@solana/spl-token";
 import { PublicKey } from "@solana/web3.js";
@@ -41,6 +42,7 @@ function sortedIndices(list) {
   });
   return indices;
 }
+
 // TODO read this const from idl
 const WEIGHTS_SCALE = 10_000;
 
@@ -59,6 +61,16 @@ type DepositFromNativeParams = {
 type WithdrawVaultParams = {
   userInputTokenAccount: web3.PublicKey;
   userLpTokenAccount: web3.PublicKey;
+  lpAmount: BN;
+};
+
+type OpenWithdrawTicketParams = {
+  userLpTokenAccount: web3.PublicKey;
+  lpAmount: BN;
+};
+
+type CloseWithdrawTicketParams = {
+  userInputTokenAccount: web3.PublicKey;
   lpAmount: BN;
 };
 
@@ -221,6 +233,84 @@ export class StrategyProgram extends TokenProgram {
         })
         .transaction();
     }
+  }
+
+  async initializeTicketMint(): Promise<web3.Transaction | null> {
+    const vaultKeys = this.vaultKeys[this.tokenInput];
+
+    const vaultLpTokenAccount = await getAssociatedTokenAddress(
+      vaultKeys.vaultLpTokenMintAddress,
+      vaultKeys.vaultAccount,
+      true
+    );
+
+    const [vaultTicketMintPubkey, _bump] =
+      await web3.PublicKey.findProgramAddress(
+        [Buffer.from("ticket_mint"), vaultKeys.vaultAccount.toBuffer()],
+        this.programId
+      );
+
+    this.vaultKeys[this.tokenInput].vaultLpTokenAccount = vaultLpTokenAccount;
+    this.vaultKeys[this.tokenInput].vaultTicketMintPubkey =
+      vaultTicketMintPubkey;
+
+    if (await this.connection.getAccountInfo(vaultTicketMintPubkey)) {
+      console.log("ticket_mint account already initialized");
+      return null;
+    } else {
+      const tx = new web3.Transaction()
+        .add(
+          createAssociatedTokenAccountInstruction(
+            this.user,
+            vaultLpTokenAccount,
+            vaultKeys.vaultAccount,
+            vaultKeys.vaultLpTokenMintAddress
+          )
+        )
+        .add(
+          await this.methods
+            .initializeTicketMint()
+            .accounts({
+              userSigner: this.user,
+              vaultAccount: vaultKeys.vaultAccount,
+              vaultLpTokenMintPubkey: vaultKeys.vaultLpTokenMintAddress,
+              vaultTicketMintPubkey,
+              systemProgram: web3.SystemProgram.programId,
+              associatedTokenProgram: ASSOCIATED_TOKEN_PROGRAM_ID,
+              tokenProgram: TOKEN_PROGRAM_ID,
+              rent: web3.SYSVAR_RENT_PUBKEY,
+            })
+            .transaction()
+        );
+      return tx;
+    }
+  }
+
+  async createVaultUserTicketAccount(): Promise<web3.Transaction | null> {
+    const vaultKeys = this.vaultKeys[this.tokenInput];
+
+    const [vaultUserTicketAccount, _bump] =
+      web3.PublicKey.findProgramAddressSync(
+        [
+          Buffer.from("ticket_mint"),
+          vaultKeys.vaultTicketMintPubkey.toBuffer(),
+          this.user.toBuffer(),
+        ],
+        this.programId
+      );
+
+    return this.methods
+      .createVaultUserTicketAccount()
+      .accounts({
+        userSigner: this.user,
+        vaultUserTicketAccount,
+        vaultAccount: vaultKeys.vaultAccount,
+        vaultTicketMintPubkey: vaultKeys.vaultTicketMintPubkey,
+        systemProgram: web3.SystemProgram.programId,
+        tokenProgram: TOKEN_PROGRAM_ID,
+        rent: web3.SYSVAR_RENT_PUBKEY,
+      })
+      .transaction();
   }
 
   async setProtocolWeights(weights: number[]): Promise<web3.Transaction> {
@@ -464,7 +554,48 @@ export class StrategyProgram extends TokenProgram {
     return [txsW, txsD];
   }
 
-  async withdraw(params: WithdrawVaultParams): Promise<web3.Transaction[]> {
+  async openWithdrawTicket(
+    params: OpenWithdrawTicketParams
+  ): Promise<web3.Transaction> {
+    return this.openWithdrawTicketBuilder(params).transaction();
+  }
+
+  async getOpenWithdrawTicketIx(
+    params: OpenWithdrawTicketParams
+  ): Promise<web3.TransactionInstruction> {
+    return this.openWithdrawTicketBuilder(params).instruction();
+  }
+
+  openWithdrawTicketBuilder(
+    params: OpenWithdrawTicketParams
+  ): MethodsBuilder<Idl, IdlInstruction> {
+    const vaultKeys = this.vaultKeys[this.tokenInput];
+
+    const [vaultUserTicketAccount, bump] =
+      web3.PublicKey.findProgramAddressSync(
+        [
+          Buffer.from("ticket_mint"),
+          vaultKeys.vaultTicketMintPubkey.toBuffer(),
+          this.user.toBuffer(),
+        ],
+        this.programId
+      );
+
+    return this.methods.openWithdrawTicket(bump, params.lpAmount).accounts({
+      userSigner: this.user,
+      userLpTokenAccount: params.userLpTokenAccount,
+      vaultUserTicketAccount,
+      vaultAccount: vaultKeys.vaultAccount,
+      vaultLpTokenMintPubkey: vaultKeys.vaultLpTokenMintAddress,
+      vaultTicketMintPubkey: vaultKeys.vaultTicketMintPubkey,
+      vaultLpTokenAccount: vaultKeys.vaultLpTokenAccount,
+      tokenProgram: TOKEN_PROGRAM_ID,
+    });
+  }
+
+  async withdrawFromProtocolsAmountsAndTxs(
+    lpAmount
+  ): Promise<[BN, web3.Transaction][]> {
     const vaultKeys = this.vaultKeys[this.tokenInput];
     const accounts = [
       { accountType: "Vault", publicKey: vaultKeys.vaultAccount },
@@ -479,35 +610,13 @@ export class StrategyProgram extends TokenProgram {
     // Internally, the previous lp-price is used but this is more conservative
     const vaultInputTokenAmount = token.amount;
     const amount = this.lpToAmountDecoded(
-      params.lpAmount,
+      lpAmount,
       vault.currentTvl,
       mint.supply
     );
 
-    const withdrawAccounts = {
-      userSigner: this.user,
-      userLpTokenAccount: params.userLpTokenAccount,
-      userInputTokenAccount: params.userInputTokenAccount,
-      vaultAccount: vaultKeys.vaultAccount,
-      vaultInputTokenAccount: vaultKeys.vaultInputTokenAccount,
-      vaultLpTokenMintPubkey: vaultKeys.vaultLpTokenMintAddress,
-      tokenProgram: TOKEN_PROGRAM_ID,
-      instructions: web3.SYSVAR_INSTRUCTIONS_PUBKEY,
-    };
-
-    const txs: web3.Transaction[] = [];
-
-    // Only withdraw from vault input token account
-    if (amount.lte(vaultInputTokenAmount)) {
-      txs.push(
-        await this.methods
-          .withdraw(params.lpAmount)
-          .accounts(withdrawAccounts)
-          .transaction()
-      );
-
-      // Withdraw the required amount from the protocol in first place
-    } else {
+    const amountsAndTxs: [BN, web3.Transaction][] = [];
+    if (amount.gt(vaultInputTokenAmount)) {
       const genericAccounts = {
         vaultAccount: vaultKeys.vaultAccount,
         vaultInputTokenAccount: vaultKeys.vaultInputTokenAccount,
@@ -538,7 +647,7 @@ export class StrategyProgram extends TokenProgram {
           mint.supply
         );
 
-        let toWithdraw = params.lpAmount.sub(withdrawn);
+        let toWithdraw = lpAmount.sub(withdrawn);
         if (toWithdraw.gt(maxLpDeposited)) toWithdraw = maxLpDeposited;
 
         let tx: web3.Transaction = new web3.Transaction();
@@ -563,19 +672,112 @@ export class StrategyProgram extends TokenProgram {
             break;
         }
 
-        // Append the withdraw from vault tx
-        tx.add(
-          await this.methods
-            .withdraw(toWithdraw)
-            .accounts(withdrawAccounts)
-            .transaction()
-        );
-        txs.push(tx);
+        amountsAndTxs.push([toWithdraw, tx]);
 
         withdrawn = withdrawn.add(toWithdraw);
-        if (params.lpAmount.lte(withdrawn)) {
+        if (lpAmount.lte(withdrawn)) {
           break;
         }
+      }
+    }
+
+    return amountsAndTxs;
+  }
+
+  async closeWithdrawTicket(
+    params: CloseWithdrawTicketParams
+  ): Promise<web3.Transaction[]> {
+    const vaultKeys = this.vaultKeys[this.tokenInput];
+
+    const [vaultUserTicketAccount, bump] =
+      web3.PublicKey.findProgramAddressSync(
+        [
+          Buffer.from("ticket_mint"),
+          vaultKeys.vaultTicketMintPubkey.toBuffer(),
+          this.user.toBuffer(),
+        ],
+        this.programId
+      );
+
+    const closeWithdrawTicketAccounts = {
+      userSigner: this.user,
+      userInputTokenAccount: params.userInputTokenAccount,
+      vaultUserTicketAccount,
+      vaultAccount: vaultKeys.vaultAccount,
+      vaultLpTokenMintPubkey: vaultKeys.vaultLpTokenMintAddress,
+      vaultTicketMintPubkey: vaultKeys.vaultTicketMintPubkey,
+      vaultInputTokenAccount: vaultKeys.vaultInputTokenAccount,
+      vaultLpTokenAccount: vaultKeys.vaultLpTokenAccount,
+      tokenProgram: TOKEN_PROGRAM_ID,
+    };
+
+    const amountsAndTxs = await this.withdrawFromProtocolsAmountsAndTxs(
+      params.lpAmount
+    );
+
+    const txs: web3.Transaction[] = [];
+
+    if (amountsAndTxs.length === 0) {
+      txs.push(
+        await this.methods
+          .closeWithdrawTicket(bump, params.lpAmount)
+          .accounts(closeWithdrawTicketAccounts)
+          .transaction()
+      );
+    } else {
+      for (const [lpAmount, txProtocol] of amountsAndTxs) {
+        // Append the withdraw (from vault) tx
+        txs.push(
+          txProtocol.add(
+            await this.methods
+              .closeWithdrawTicket(bump, lpAmount)
+              .accounts(closeWithdrawTicketAccounts)
+              .transaction()
+          )
+        );
+      }
+    }
+
+    return txs;
+  }
+
+  async withdraw(params: WithdrawVaultParams): Promise<web3.Transaction[]> {
+    const vaultKeys = this.vaultKeys[this.tokenInput];
+
+    const withdrawAccounts = {
+      userSigner: this.user,
+      userLpTokenAccount: params.userLpTokenAccount,
+      userInputTokenAccount: params.userInputTokenAccount,
+      vaultAccount: vaultKeys.vaultAccount,
+      vaultInputTokenAccount: vaultKeys.vaultInputTokenAccount,
+      vaultLpTokenMintPubkey: vaultKeys.vaultLpTokenMintAddress,
+      tokenProgram: TOKEN_PROGRAM_ID,
+    };
+
+    const amountsAndTxs = await this.withdrawFromProtocolsAmountsAndTxs(
+      params.lpAmount
+    );
+
+    const txs: web3.Transaction[] = [];
+
+    if (amountsAndTxs.length === 0) {
+      txs.push(
+        await this.methods
+          .withdraw(params.lpAmount)
+          .accounts(withdrawAccounts)
+          .transaction()
+      );
+    } else {
+      for (const [lpAmount, txProtocol] of amountsAndTxs) {
+        // Append the withdraw (from vault) tx
+        txs.push(
+          txProtocol.add(
+            await this.methods
+              .withdraw(lpAmount)
+              .accounts(withdrawAccounts)
+              .transaction()
+          )
+        );
       }
     }
 
