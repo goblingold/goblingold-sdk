@@ -286,7 +286,7 @@ export class StrategyProgram extends TokenProgram {
     }
   }
 
-  async createVaultUserTicketAccount(): Promise<web3.Transaction | null> {
+  async createVaultUserTicketAccount(): Promise<web3.TransactionInstruction | null> {
     const vaultKeys = this.vaultKeys[this.tokenInput];
 
     const [vaultUserTicketAccount, _bump] =
@@ -310,7 +310,7 @@ export class StrategyProgram extends TokenProgram {
         tokenProgram: TOKEN_PROGRAM_ID,
         rent: web3.SYSVAR_RENT_PUBKEY,
       })
-      .transaction();
+      .instruction();
   }
 
   async setProtocolWeights(weights: number[]): Promise<web3.Transaction> {
