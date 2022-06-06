@@ -64,6 +64,10 @@ type WithdrawVaultParams = {
   lpAmount: BN;
 };
 
+type CreateVaultUserTicketParams = {
+  userTicketAccountOwner: web3.PublicKey;
+};
+
 type OpenWithdrawTicketParams = {
   userLpTokenAccount: web3.PublicKey;
   lpAmount: BN;
@@ -286,7 +290,9 @@ export class StrategyProgram extends TokenProgram {
     }
   }
 
-  async createVaultUserTicketAccount(): Promise<web3.TransactionInstruction | null> {
+  async createVaultUserTicketAccount(
+    params: CreateVaultUserTicketParams
+  ): Promise<web3.TransactionInstruction | null> {
     const vaultKeys = this.vaultKeys[this.tokenInput];
 
     const [vaultUserTicketAccount, _bump] =
@@ -303,6 +309,7 @@ export class StrategyProgram extends TokenProgram {
       .createVaultUserTicketAccount()
       .accounts({
         userSigner: this.user,
+        userTicketAccountOwner: params.userTicketAccountOwner,
         vaultUserTicketAccount,
         vaultAccount: vaultKeys.vaultAccount,
         vaultTicketMintPubkey: vaultKeys.vaultTicketMintPubkey,

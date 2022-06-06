@@ -377,6 +377,11 @@
           "isSigner": true
         },
         {
+          "name": "userTicketAccountOwner",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
           "name": "vaultUserTicketAccount",
           "isMut": true,
           "isSigner": false
