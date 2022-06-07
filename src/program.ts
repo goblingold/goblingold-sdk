@@ -872,7 +872,7 @@ export class StrategyProgram extends TokenProgram {
         const scale = new BN(Math.pow(10, TOKENS[token].decimals));
         const tokenPrice = prices[token] * 10000 ?? 0;
         totalTvl = totalTvl.add(
-          tvl.div(scale).mul(new BN(tokenPrice)).div(new BN(10000))
+          tvl.mul(new BN(tokenPrice)).div(scale).div(new BN(10000))
         );
       }
     }
