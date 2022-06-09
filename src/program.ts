@@ -872,7 +872,10 @@ export class StrategyProgram extends TokenProgram {
 
         const tvl = vaultAccount.currentTvl;
         const scale = new BN(Math.pow(10, TOKENS[token].decimals));
-        const tokenPrice = prices[token] * 10000 ?? 0;
+        const tokenPrice =
+          prices[token === TOKENS.WSOL.symbol ? TOKENS.SOL.symbol : token] *
+            10000 ?? 0;
+
         totalTvl = totalTvl.add(
           tvl.mul(new BN(tokenPrice)).div(scale).div(new BN(10000))
         );
