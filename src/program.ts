@@ -79,6 +79,11 @@ type CloseWithdrawTicketParams = {
   lpAmount: BN;
 };
 
+export type DepositedAssets = {
+  asset: string;
+  deposited: string;
+};
+
 // TODO should be exported in client and used here
 export class TokenProgram extends Program {
   tokenInput = "WSOL";
@@ -857,6 +862,22 @@ export class StrategyProgram extends TokenProgram {
     const scale = new BN(Math.pow(10, TOKENS[token].decimals));
     const tokenPrice = await getPrice(token);
     return tvl.div(scale).mul(new BN(tokenPrice));
+  }
+
+  async assetsDeposited(): Promise<DepositedAssets[]> {
+    const vaultAccounts = await this.decodeVaults();
+    let deposited: DepositedAssets[] = [];
+    let i = 0;
+    // decoded in the same order than TOKENS keys (if pubkey exists)
+    for (const token of Object.keys(TOKENS)) {
+      if (this.vaultKeys[token].vaultAccount) {
+        deposited.push({
+          asset: token,
+          deposited: vaultAccounts[i++].currentTvl.toString(),
+        });
+      }
+    }
+    return deposited;
   }
 
   async tvlUSDAllTokens(): Promise<BN> {
