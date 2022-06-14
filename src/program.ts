@@ -884,15 +884,22 @@ export class StrategyProgram extends TokenProgram {
     const vaultAccounts = await this.decodeVaults();
     const prices: Record<string, number> = await getPrices();
 
-    let i = 0;
     let totalTvl = new BN(0);
-    // decoded in the same order than TOKENS keys (if pubkey exists)
     for (const token of Object.keys(TOKENS)) {
       if (this.vaultKeys[token].vaultAccount) {
-        const tvl = vaultAccounts[i++].currentTvl;
+        const vaultAccount = vaultAccounts.find(
+          (acc) => acc.inputMintPubkey.toString() === TOKENS[token].mintAddress
+        );
+
+        const tvl = vaultAccount.currentTvl;
         const scale = new BN(Math.pow(10, TOKENS[token].decimals));
-        const tokenPrice = prices[token] ?? 0;
-        totalTvl = totalTvl.add(tvl.div(scale).mul(new BN(tokenPrice)));
+        const tokenPrice =
+          prices[token === TOKENS.WSOL.symbol ? TOKENS.SOL.symbol : token] *
+            10000 ?? 0;
+
+        totalTvl = totalTvl.add(
+          tvl.mul(new BN(tokenPrice)).div(scale).div(new BN(10000))
+        );
       }
     }
     return totalTvl;
