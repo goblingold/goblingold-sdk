@@ -82,6 +82,8 @@ type CloseWithdrawTicketParams = {
 export type DepositedAssets = {
   asset: string;
   deposited: string;
+  mint: string;
+  ggMint: string;
 };
 
 // TODO should be exported in client and used here
@@ -874,6 +876,8 @@ export class StrategyProgram extends TokenProgram {
         deposited.push({
           asset: token,
           deposited: vaultAccounts[i++].currentTvl.toString(),
+          mint: TOKENS[token].mintAddress,
+          ggMint: this.vaultKeys[token].vaultLpTokenMintAddress.toString(),
         });
       }
     }
