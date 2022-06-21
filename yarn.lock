@@ -147,9 +147,9 @@
     start-server-and-test "^1.14.0"
 
 "@solana/web3.js@^1.32.0", "@solana/web3.js@^1.36.0", "@solana/web3.js@^1.42.0":
-  version "1.43.4"
-  resolved "https://registry.yarnpkg.com/@solana/web3.js/-/web3.js-1.43.4.tgz#cb38e3e3fe1195195017d5e5453ecced6cffc259"
-  integrity sha512-9+c965R3vjIRIfUFQtKfaG8BM4tVoo/fp4DvmqHAGLTaeHilVsRdyXszW6+Ues5KczgBejlp62k2SeUcbOibUg==
+  version "1.44.2"
+  resolved "https://registry.yarnpkg.com/@solana/web3.js/-/web3.js-1.44.2.tgz#5303efd94a7f2d6054a1483a4b4db4a26eb2a392"
+  integrity sha512-DvrJMoKonLuaX0/KyyJXcP/+w+9q8mve4gN3hC2Ptg51K/Gi1/cx6oQN2lbRZb4wYPBd2s2GDAJAJUAwZGsEug==
   dependencies:
     "@babel/runtime" "^7.12.5"
     "@ethersproject/sha2" "^5.5.0"
