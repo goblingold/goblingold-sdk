@@ -14,7 +14,7 @@ import {
   TOKEN_PROGRAM_ID,
   createAssociatedTokenAccountInstruction,
   getAssociatedTokenAddress,
-} from "@solana/spl-token";
+} from "@solana/spl-token-v2";
 import { PublicKey } from "@solana/web3.js";
 import { addressParser } from "./addressParser";
 import { DAO_TREASURY_OWNER } from "./client";

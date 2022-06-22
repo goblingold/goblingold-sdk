@@ -4,7 +4,7 @@ import { MethodsBuilder } from "@project-serum/anchor/dist/cjs/program/namespace
 import {
   createAssociatedTokenAccountInstruction,
   getAssociatedTokenAddress,
-} from "@solana/spl-token";
+} from "@solana/spl-token-v2";
 import { createHash } from "sha256-uint8array";
 import { addressParser } from "../addressParser";
 import { StrategyProgram } from "../program";
@@ -63,9 +63,7 @@ export async function initializeProtocol(
     vaultFranciumCollateralTokenAccount;
 
   if (
-    await program.connection.getAccountInfo(
-      vaultFranciumCollateralTokenAccount
-    )
+    await program.connection.getAccountInfo(vaultFranciumCollateralTokenAccount)
   ) {
     console.log("francium accounts already initialized");
     return null;

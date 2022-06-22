@@ -4,7 +4,7 @@ import {
   MintLayout,
   RawAccount,
   RawMint,
-} from "@solana/spl-token";
+} from "@solana/spl-token-v2";
 import { StrategyProgram } from "./program";
 
 export type DecodeMultipleAccountsParams = {

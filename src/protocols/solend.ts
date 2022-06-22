@@ -4,7 +4,7 @@ import { MethodsBuilder } from "@project-serum/anchor/dist/cjs/program/namespace
 import {
   createAssociatedTokenAccountInstruction,
   getAssociatedTokenAddress,
-} from "@solana/spl-token";
+} from "@solana/spl-token-v2";
 import BufferLayout from "buffer-layout";
 import { createHash } from "sha256-uint8array";
 import { addressParser } from "../addressParser";
@@ -35,9 +35,7 @@ export async function initializeProtocol(
     vaultSolendCollateralTokenAccount;
 
   if (
-    await program.connection.getAccountInfo(
-      vaultSolendCollateralTokenAccount
-    )
+    await program.connection.getAccountInfo(vaultSolendCollateralTokenAccount)
   ) {
     console.log("solend accounts already initialized");
     return null;
