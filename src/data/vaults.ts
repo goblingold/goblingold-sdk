@@ -248,6 +248,25 @@ const orcaStrategyBestAPY: StrategyVault = {
     "The protocols being used underneath (although being audited) present some risks. No audit has been done for the current strategy. Use it at your own risk.",
 };
 
+const samoStrategyBestAPY: StrategyVault = {
+  type: "bestApy",
+  name: "Best APY",
+  input: TOKENS.SAMO,
+  lp: TOKENS.ggSAMO,
+  vaultAccount: new anchor.web3.PublicKey(
+    "g5S5WcsYn9CJE6VSwaCoaESZq3Da9Mn7gvt1MB2MFmU"
+  ),
+  tvl: new anchor.BN(0),
+  supply: new anchor.BN(0),
+  apy: "0",
+  apr: "0",
+  aboutTxt:
+    "This strategy automatically rebalances between different lending protocols in order to get the maximum yield in each period.",
+  protocolsTxt: "Tulip and Francium",
+  risksTxt:
+    "The protocols being used underneath (although being audited) present some risks. No audit has been done for the current strategy. Use it at your own risk.",
+};
+
 export const STRATEGY_VAULTS: StrategyVault[] = [
   solanaStrategyBestAPY,
   usdcStrategyBestAPY,
@@ -260,4 +279,5 @@ export const STRATEGY_VAULTS: StrategyVault[] = [
   mngoStrategyBestAPY,
   rayStrategyBestAPY,
   orcaStrategyBestAPY,
+  samoStrategyBestAPY,
 ];

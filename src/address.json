@@ -519,6 +519,7 @@
         "MNGO": "D6uU6DLvwhtwv99RVfuynvkyiBxqStDS3j3CMSca7Nx7",
         "ORCA": "9eHqpDBtCG2irv51BmT6WY4dYyrPe3Rv2PYdpDQVio5J",
         "RAY": "GATpdUVR97CN6DqCkjZFjuHF6M4FU3efFxCxjHrSrTEY",
+        "SAMO": "2G5PRGyFdNWXpCQyK1dJX7QSbQhkExfFQk1ULK4iPvAX",
         "SRM": "EUzuEZP8TTX7eu2VE3htv3BarkMLSfsccyweFZyvdKNY",
         "USDC": "SRVYvhp94Y4MpCVg1FtJ9RofeTozpBg7owazcNJT5wh",
         "USDT": "HxqB75sXCx2JhhmZMBYQWiBbQbSDEXwmnLJN88usmMX7",
@@ -533,6 +534,7 @@
         "MNGO": "E5znWeT1pEiMXpko8JUNvGfs1X6cuupHZB2PeDhx5mt8",
         "ORCA": "9b2J1JjsvnkLc9ZQmARDbq7EMhCDzr4QG4fAR6TfZkTK",
         "RAY": "6w6NRsDUnBieNiVBHoixEqqfGnr2wXdoSWWZRn7S36db",
+        "SAMO": "g5S5WcsYn9CJE6VSwaCoaESZq3Da9Mn7gvt1MB2MFmU",
         "SRM": "3MvY3Tk3PmQhEeHqyfJA9gDBq83MUM92rgbhLeY27JLv",
         "USDC": "ATJpBsXbhio5c5kqgMHmAfFDdjsS3ncZmZyZzNY87XqZ",
         "USDT": "ATpgW6RzUvEt13rU9NMj1HsmEeW2zC9a1k5AQbako8md",
@@ -545,6 +547,7 @@
         "BTC": "8cj9EY46ZSwzpR45H4T7GMcnpJjk1uzjnCz3ErBesBrR",
         "ORCA": "FtAHx5hVfDCv9TjrSAS3KEGF13Lf3SXBAXWPo6HCGv23",
         "RAY": "2NHPhWVGAwmpMougfy6ddN94vkkng9jGNLcatK7o73SV",
+        "SAMO": "DqeVaEQGwvrg1UGACMbAEJBnaSZ2upXL1MmydweMZWEj",
         "SRM": "3R5dS1GZvoh85v9hfR5LusPCvpbxdiJqKqcQQ7aaUc1E",
         "USDC": "9xCqTVK6aiDJWxc1dbKBpMTAzVGn2G6ea1udgs1gpRKo",
         "USDT": "BxGxxtW5N6tgqwFqhbEJWvgGgbuNVdPe5y1G7xnJwxWY",
@@ -558,6 +561,7 @@
         "MNGO": "gujNd9ZTMRuKKHVigat4kqFtaEfNvEZjjLn7nNDW3QE",
         "ORCA": "FdiZfYpiwoUigbbMoKTbFbaZKHRSh4uuQXhN6Y41UNya",
         "RAY": "HPxU37mc9varUSjj8JaJQ4orKSvY4tSc5Zdg1UaeW1jq",
+        "SAMO": "Dp37qjN6mKLyXq9cVWpdZ7ndirqmUDrc5TjxXTJk9Aed",
         "SRM": "EXq8UEF7h3BueZuQ3c8ojrJmA25iM4M6FDBWWEvv3HHr",
         "USDC": "8YA4fRkroLMaGExpH4KMXC94m7hvLnVfa6x24EPGh7Yf",
         "USDT": "EFpqGXuaAeR7d9bAURYvBCukHTqE4G1YYnKPk6iMtL93",
@@ -566,11 +570,16 @@
         "soETH": "Akde4FZWWLrjFbaJvFyMTtYEtyXax26UN7QEL4D3iP3G",
         "stSOL": "7GEgNmhnXqFbivmZ3wJF73RBdHEuraWVE6VBkR73GwGy"
       },
+      "vaultLpTokenAccount": {
+        "USDC": "4H8bNrGVZ3qCHqmuKUREx19iDvykndUELoD2Mpdb2wgb",
+        "WSOL": "GZymCgrqzeEwzYCv8ggiVB6XfzricaqPZQry6UiyhM7U"
+      },
       "vaultLpTokenMintAddress": {
         "BTC": "Er1sCVW55YH6gMTc8HdvZwZ9YrWksLAso6HtA3knXBKU",
         "MNGO": "GfSggsLj9ZcYcHxanX85d7nas7s1GJPMuDgMCWDhoi7Z",
         "ORCA": "898Vy3qq3pMRbAXpznFkYSDv5tK4hrN8ufAUuKkZHMXa",
         "RAY": "GAsp3xeG4LQLjyJnT7ochh9gKaF17c7ssTjjPS8B1mQv",
+        "SAMO": "3B3JE2wSp1oV98tLTmZZDZXJzc2J4qSZmSXC4ZvHqhT4",
         "SRM": "CA3oB8EiByQ4yrcexSJDbfGvk1CJrPRcZf2UE14ZRvtx",
         "USDC": "HAYwz6cHGuGAvLNifqGypH4mzv8fF5wv9SvcYLRGd18Q",
         "USDT": "9oLbMFr1AedcbXjqNge4QkrQMw5Jeae3eTbPQ94Zp1aD",
@@ -616,10 +625,15 @@
         "USDC": "44EaFT9KV7qu27KcwP5cpDhzkT3DeCcZvjDmjsFhNFMt",
         "USDT": "BWfM2ZpXgWdEArv8zCjSZU5F1MUzCVc6vpNtXmQv1HfU"
       },
+      "vaultTicketMintPubkey": {
+        "USDC": "Hw45vdzDzbv3wPnHwXysic3cXohUYiX7sdkbLB2naJPb",
+        "WSOL": "2FFC6VZjKpArLErNSvufMcChbQ6jFE67EqoRG5a1K5wa"
+      },
       "vaultTulipCollateralTokenAccount": {
         "BTC": "H1HS5hUj13SFirjp2QNh6Rpk16yyMe4qYh8zk8P3BNQa",
         "ORCA": "4dMnrQmMHARA8eYC7MaybCb8rojvH8oevzSjzHkSoKqe",
         "RAY": "5P6DshcBagjx5HEhf8nzcrsz4nhqXLXa4eFkHAnKyhEC",
+        "SAMO": "FGRnurR83fgKrxJawmARxVRWvsk9uck7ZqdxzFJ6BCEK",
         "SRM": "TgrCGEbtsKtASqHwwJe6gN5byKnPpUiD6d3ukVznhne",
         "USDC": "2QFp8oyiZKrcUDDJAzKLMJMZm6prC9Aj9spzb5nGuBxx",
         "USDT": "8HywHJ35yFUFjYanTYK5TUMZssNxMhZHXsmNjSXvmcK",
@@ -627,14 +641,6 @@
         "mSOL": "Haf8bnUw9nVEN65P5PtRJ9D4cTfxCGAFgopVaKoXPfA8",
         "soETH": "7xehPx6aykoqY1ybqZrMAeCpCvNXqQrHfaF9L7hhM9Yq",
         "stSOL": "8MX2ko4tM7FntxM7Zunssn5ZFb4sazAb6tU3LWM56eVd"
-      },
-      "vaultTicketMintPubkey":{
-        "WSOL":"2FFC6VZjKpArLErNSvufMcChbQ6jFE67EqoRG5a1K5wa",
-        "USDC":"Hw45vdzDzbv3wPnHwXysic3cXohUYiX7sdkbLB2naJPb"
-      },
-      "vaultLpTokenAccount":{
-        "WSOL":"GZymCgrqzeEwzYCv8ggiVB6XfzricaqPZQry6UiyhM7U",
-        "USDC":"4H8bNrGVZ3qCHqmuKUREx19iDvykndUELoD2Mpdb2wgb"
       }
     }
   }

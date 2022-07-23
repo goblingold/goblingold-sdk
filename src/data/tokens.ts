@@ -80,6 +80,13 @@ export const TOKENS: Tokens = {
     decimals: 6,
     decimalsE: 1e6,
   },
+  SAMO: {
+    symbol: "SAMO",
+    name: "Samoyed Coin",
+    mintAddress: "7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU",
+    decimals: 9,
+    decimalsE: 1e9,
+  },
   SRM: {
     symbol: "SRM",
     name: "Serum",
@@ -205,6 +212,13 @@ export const TOKENS: Tokens = {
     mintAddress: "CJh7k9GqRkZvNPEueRBuirWVekr8e2SSeCHNWGZui2SJ",
     decimals: 6,
     decimalsE: 1e6,
+  },
+  ggSAMO: {
+    symbol: "ggSAMO",
+    name: "ggSAMO",
+    mintAddress: "3B3JE2wSp1oV98tLTmZZDZXJzc2J4qSZmSXC4ZvHqhT4",
+    decimals: 9,
+    decimalsE: 1e9,
   },
 };
 

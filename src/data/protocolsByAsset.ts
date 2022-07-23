@@ -71,4 +71,6 @@ export const PROTOCOLS_BY_ASSET: Record<string, Protocols[]> = {
   RAY: [Protocols.Mango, Protocols.Solend, Protocols.Tulip, Protocols.Francium],
 
   ORCA: [Protocols.Solend, Protocols.Tulip, Protocols.Francium],
+
+  SAMO: [Protocols.Tulip, Protocols.Francium],
 };
