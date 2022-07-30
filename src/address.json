@@ -6,6 +6,7 @@
         "BASIS": "9s2iRZBzSNCNTUtuzSRHcv3q4Q9SaFFhSFZVnFXGtHUp",
         "BTC": "2G9iwy9zfLaXB2bFiqSA7YbKEvtAEXVmdvGTF28jQVgg",
         "DFL": "CGhMaGeVLxxQGJh6Y2bEYfLazumuFyEXpxF1UgrcMRJi",
+        "ETH": "Hk8b6i2C7PxFBPdd1TCrGssuZpCDEg4fh8yFuyHNJuJe",
         "GENE": "9z3eDHueAMdUtym9Q2ku3hi5YXHTYjpFLp1YEEnxUHPV",
         "GMT": "9R6toP3xTFBWoqwBY8bfjUj6Tyd5hyR192jY4NeMmkNg",
         "GST": "4GDuSZwHUQvL6zga2UNdjgXSqXjcWaUYc4S36N9q4567",
@@ -26,8 +27,7 @@
         "wUST": "FPnFwW1ASFLBReVz1EPWVGkbrsnrekVkEcQnrBRkvDXS",
         "wbWBNB": "8EzbLKBQ8Rest1SWUtZR6zFvYTo4cCaQ73ni8sF9vtjA",
         "weSUSHI": "EEhiV55jAt5JDpeH3GF4VGrStiPn5gCeWmqffyTp9B4E",
-        "weUNI": "CGj7e1g4ojW1RhSocF8AKWxHFaqCQjK8kBsbHqNB4BxP",
-        "whETH": "Hk8b6i2C7PxFBPdd1TCrGssuZpCDEg4fh8yFuyHNJuJe"
+        "weUNI": "CGj7e1g4ojW1RhSocF8AKWxHFaqCQjK8kBsbHqNB4BxP"
       },
       "lendingMarketAuthority": "sCDiYj7X7JmXg5fVq2nqED2q1Wqjo7PnqMgH3casMem",
       "lendingPoolInfoAccount": {
@@ -35,6 +35,7 @@
         "BASIS": "499SnZR7dFzLU6BF9v9obfSCsmgui3FBtYtFDakD89zQ",
         "BTC": "DxAuEAxKYXsKMYG5Ma4TM8AsrAo7LQBSnbEGicU7i1ek",
         "DFL": "74fWq2xnHBP1W6QhLDazCZAuZvp9XY3ck1PGNJg9hfhi",
+        "ETH": "EEokU6r9bBdTz1umHjGhkjgfikARsJzJBXhYxnTmN4Xk",
         "GENE": "FrgyPPEPNC25ihob4ZobP3eYjh8uBoxLiobdMDX2EsMc",
         "GMT": "9b5QWW2SqjmhRxtYTHXj6LFkmUkahrLAMQer3rEurd1k",
         "GST": "93zxnt1gPepvUjWYPP32uANnhAK6NNphGD6A2yQFhk4s",
@@ -55,14 +56,14 @@
         "wUST": "G1PYcFc56DQHDjSyt8zRKcnxbBrKJq4Vehurzrt2KUzs",
         "wbWBNB": "6RnKftFywvw8sceeWUM623BYyMeW216276G4atZ23CrF",
         "weSUSHI": "2oTEVdMpSRsamFeNYzqn3wifsPHRomA8TShgbTnDtTgN",
-        "weUNI": "H4uTQ8CCFJYVQYZ8c2bH7hHGrrok6k4pWDhk5NQt9KR8",
-        "whETH": "EEokU6r9bBdTz1umHjGhkjgfikARsJzJBXhYxnTmN4Xk"
+        "weUNI": "H4uTQ8CCFJYVQYZ8c2bH7hHGrrok6k4pWDhk5NQt9KR8"
       },
       "lendingPoolTknAccount": {
         "ATLAS": "E5ovYitzudRyUy7AS4U52eFgrq1rjr773rRGpYax1nmD",
         "BASIS": "E85Eyi4NmBp2Der1ntoNNx3AH5FHmjp4gGoUPW7qYVJ8",
         "BTC": "2MN34BxuLVrjZpKYKHmW1c6ZGeQs4aWQRrEvmrYfZdtG",
         "DFL": "5QNHLaujxMgFKYaJM55uYb3jyMGgvspizg7S5eVAD3d8",
+        "ETH": "9Mq6KEyW1nF24TcGrdLLfnK2pE5VdMxbY2SZtcP84R5X",
         "GENE": "A4UMfr97y35AvCaakKRAE5UBsb4UuvRQ2JiT23dyzDFu",
         "GMT": "7ZosDG7JWwXFnzhQ2aQ1ghCSQ9mrQzvH3ZhduhRPHgJB",
         "GST": "4Y7VyaAWEDaQSkeYXbXRf1d82ZPViVRZ7Dt4fjHKgotL",
@@ -83,8 +84,7 @@
         "wUST": "DKYpvhtPyU9yWkGZx5VM4fA1isLwpcmQ8ttqhPJgMMrJ",
         "wbWBNB": "F7SQgbgunwx7PKc9i5zXJfSNsjU9xM5P8Sb18FCUBKyf",
         "weSUSHI": "4VAyWCoRbW5YXiV5Rz7pZy7miYBJLjfZYsykDuTnWyqj",
-        "weUNI": "E3fN9Wqesn2NbYGPjybFo5HTMpcyLPnWNHovQpQqqw8G",
-        "whETH": "9Mq6KEyW1nF24TcGrdLLfnK2pE5VdMxbY2SZtcP84R5X"
+        "weUNI": "E3fN9Wqesn2NbYGPjybFo5HTMpcyLPnWNHovQpQqqw8G"
       },
       "lendingProgram": "FC81tbGt6JWRXidaWYFXxGnTk4VgobhJHATvTRVMqgWj",
       "marketInfoAccount": "4XNif294wbrxj6tJ8K5Rg7SuaEACnu9s2L27i28MQB6E"
@@ -149,6 +149,7 @@
       "lendingProgramId": "Port7uDYB3wk6GJAw4KT1WpTeMtSu9bTcChBHkX2LfR",
       "oracleAccount": {
         "BTC": "GVXRSBjFk6e6J3NbVPXohDJetcTjaeeuykUpbQF8UoMU",
+        "ETH": "JBu1AL4obBcCMqKBBxhpWCNUt136ijcuMZLFvTP7iWdB",
         "FIDA": "ETp9eKXVv1dWwHSpsXRUuXHmw24PwRkttCGVgpZEY9zF",
         "MER": "G4AQpTYKH1Fmg38VpFQbv6uKYQMpRhJzNPALhp7hqdrs",
         "PAI": "nu11111111111111111111111111111111111111111",
@@ -163,6 +164,7 @@
       },
       "reserveAccount": {
         "BTC": "DSST29PMCVkxo8cf5ht9LxrPoMc8jAZt98t6nuJywz8p",
+        "ETH": "AtooWNBQRrg94ZeNdx9nk5HMSzHyXVbVvsdPXtbcMG1J",
         "FIDA": "Bten75q82AMWmrRp77DgsphtSbUjHYhL7Mx5bx6SR4iA",
         "MER": "BnhsmYVvNjXK3TGDHLj1Yr1jBGCmD1gZMkAyCwoXsHwt",
         "PAI": "DSw99gXoGzvc4N7cNGU7TJ9bCWFq96NU2Cczi1TabDx2",
@@ -177,6 +179,7 @@
       },
       "reserveCollateralMintAccount": {
         "BTC": "QN2HkkBaWHfYSU5bybyups9z1UHu8Eu7QeeyMbjD2JA",
+        "ETH": "Fu8gTpPR6DAxzWK2jDW7axuK3MBZcr5hKfjALXDpY3Zw",
         "FIDA": "Fh4YC5c9AFBysLR3mkCpZhCET4JnST9XuTprGChQ1bBt",
         "MER": "6UgGnLA3Lfe8NBLAESctsUXWdP3zjMFzSLEZxS3tiaKh",
         "PAI": "GaqxUwFGGrDouYLqghchmZU97Y1rNhyF7noMTJNvpQPa",
@@ -191,6 +194,7 @@
       },
       "reserveLiquiditySupplyAccount": {
         "BTC": "FZKP27Zxz9GbW86hhq3d1egzpBH5ZnYkyjQZVf86NQJ8",
+        "ETH": "6a5Z5ZhzL5EWqHTkLzfUxteuKX9T2deesinsjCZSThZ2",
         "FIDA": "87T5RXKyxy5MsdoeFWEU1A9tHjiYfWLwT1ZsL6M4h2C3",
         "MER": "6UmrawFZgdPvMe6BLZdZCNRFz9u2TWsu5enFbTufA3a1",
         "PAI": "42kNZrAuwZHLtuc7jvVX7zMfkfgwbPynqzFB3zdkAEGM",
@@ -267,7 +271,7 @@
       },
       "reserveLiquiditySupplySplTokenAccount": {
         "BTC": "4jkyJVWQm8NUkiJFJQx6ZJQhfKLGpeZsNrXoT4bAPrRv",
-        "ETH": "BtGoQiwEWUZQfNaxSxzBgRikfT1rx3hSkzjQEWvktEMe",
+        "ETH": "8HAaZSiCbVqrLDQHxg3yey8JWuGbeyC2tNTEmzgmt4C4",
         "MER": "CNREdzCSa2X5HQ6xjDZ1jd2XN3nmwTHfQkYj9pWAZuXs",
         "ORCA": "5grnVTzYxhhhbiSdbkznMff721ZPMP3SzYhy2Yzd37jt",
         "RAY": "5JT6EK5wLEYGpAXMY2BXvhoeuQCp93eo4os2EtXwnPG1",
@@ -363,6 +367,7 @@
         "CAVE": "9nhjZPZcSWjSVEfgGAhzfPYUVtnHkcRkURYTweT3jKhC",
         "COPE": "8cm7UrBiDQ4C1ntQSCZfHSWKUizdW31ddTQGNY6Lym3B",
         "DFL": "47cP8Q9x6EpA3AL3brKnPohMSmmjsn9dAvuCKaeFZu1H",
+        "ETH": "85SyKDLXZPC1sqdFqasywQojutGhDCobbPHM6zczD1Li",
         "GENE": "DxTDysdSXAvZeUt87XagVDbStKUttSrwahot5vnUN6YH",
         "GMT": "CEGSnMwZmF512Uva5rTiF1Gx1byMDNdT7UpD8vNXuTQJ",
         "GST": "Ghvf8bVnDjv1nbi9b3PjSw9iBWFy2ApmdCUgzmPFmNVi",
@@ -390,8 +395,7 @@
         "stSOL": "27CaAiuFW3EwLcTCaiBnexqm5pxht845AHgSuq36byKX",
         "wALEPH": "A2AZDzmyVMkskC4DfnxwP6hbAj3D1LdSLJrpgruWEcBs",
         "wUST": "4pgVP6LAbRDaSnR3jfDSBBkUPFxYgWYNhn2L4YRKpgcW",
-        "wbWBNB": "FWvJZ2nfiRsU2jhFbWRFzwcLWUV8Uc1MuctPwPQ94YB3",
-        "whETH": "85SyKDLXZPC1sqdFqasywQojutGhDCobbPHM6zczD1Li"
+        "wbWBNB": "FWvJZ2nfiRsU2jhFbWRFzwcLWUV8Uc1MuctPwPQ94YB3"
       },
       "lendingMarketAccount": "D1cqtVThyebK9KXKGXrCEuiqaNf5L4UfM1vHgCqiJxym",
       "lendingProgram": "4bcFeLv4nydFrsZqV5CgwCVrPhkQKsXtzfy2KyMz7ozM",
@@ -403,6 +407,7 @@
         "CAVE": "9yY8BabAtpP2dvNHwPjfF2kss1dZhqbQMcFfmWq17pmo",
         "COPE": "7v1EmKhBa4deAtMia21CpZ1uUqgFg8oGiXt314x6qpq2",
         "DFL": "BauZ6hiW6Mhffc4CnBh7hox4BxC2kDiHARBXs6xTZ9Zq",
+        "ETH": "EWhUcqPMNVetwrJLJhQSkpzE5sU8nAVtRmJJV2EpgD3g",
         "GENE": "7VrZiv3Qmt4ZJwFWaDQ1FqjCW85XUeJYq66eGGiVBo5R",
         "GMT": "FAwuWLXEEtixroNbi1YC6MbREdaGkuqMaseZkSTbdxFN",
         "GST": "9eJaphdrHyowLgU4sf5LQTJcvF5CGUfctvUHdNZ1PJU1",
@@ -430,8 +435,7 @@
         "stSOL": "87YN1wkWLKnWANkPAkhSq3T2xwmj3qbjudKaanCAiZNt",
         "wALEPH": "6MBECW2vo7wPHHngJDRveiYHHLehwr75iZTYteehciGe",
         "wUST": "9GYdZbvYw7tcJPEmi1yDPGV9vdxfGpAPsZa84aA7XAop",
-        "wbWBNB": "4umrjG5sMTNS9S88madNNnzLARavZJR2AJJkiMZUyxUW",
-        "whETH": "EWhUcqPMNVetwrJLJhQSkpzE5sU8nAVtRmJJV2EpgD3g"
+        "wbWBNB": "4umrjG5sMTNS9S88madNNnzLARavZJR2AJJkiMZUyxUW"
       },
       "priceAccount": {
         "ALEPH": "ALZYjXU1TWXDVMv2UT5W1ZqBCcxbuxLk2BQDjpfsKFrq",
@@ -441,6 +445,7 @@
         "CAVE": "BV1wT5q5rH4yYprUBnWpLdBKVpUVKfBB1xdCFqxwGXbF",
         "COPE": "AxY4cbvquLMFJcTz5jPquLoJ7h7zuEd4jPc33MD9wRbc",
         "DFL": "7xHk2cgACwAUeTdwqpCp2hT1svQu137GsWQZCTueSv4B",
+        "ETH": "5gmFU9vd4hgqYE6vja4T41gZmdUweZwxy3f6GeUQoqCA",
         "GENE": "VVRfsnyaY35mDjtbgk3DPCMaWCrNf6hjQEzXU69cEzW",
         "GMT": "99JYoMC3JZXdCKieo4xUADPbCqh3UfT4pJ4QNwzJJV3L",
         "GST": "588vN2WenXv3YCNqvQoMQmhLeVWuTGMzAU67pQ8Zxiu8",
@@ -468,8 +473,7 @@
         "stSOL": "S34N4RBvtzJnKYG6V7W49aX4ghAAVoyp4oJiZYDhKei",
         "wALEPH": "5nTDtTdRGZiN6sf1DfpsK2zAav1DEz4ch6oTjuLAUmsF",
         "wUST": "8AKWCyuswSCYmLVmjneajMRANnk5X6GDREuigpKZCwQ1",
-        "wbWBNB": "Dqbw77hVv3qb5AYR9PgGpNTYEyJE7oypKbpD24J3Zhfv",
-        "whETH": "5gmFU9vd4hgqYE6vja4T41gZmdUweZwxy3f6GeUQoqCA"
+        "wbWBNB": "Dqbw77hVv3qb5AYR9PgGpNTYEyJE7oypKbpD24J3Zhfv"
       },
       "reserveAccount": {
         "ALEPH": "5nestDtwfXxCHbJ7BcWgucBmSp7ApxUtW9cDwDa3apED",
@@ -479,6 +483,7 @@
         "CAVE": "4eEZmrgcBnQ6XrtzVkZB3Ae9zvWF3AaDio8Xem4qZ5cb",
         "COPE": "DrYZA2Q6eBwFD7d2x8mmsLWNcQJGVEX6ntF9nMmNpPBe",
         "DFL": "9z3qY3jfoPVGAfCqr1w95q5RW29tSNvyitLL67o4E6Lk",
+        "ETH": "7n9bDFUxehuw7yAHnK9eWKSfMx5u6NYWPVLKYnz93fzj",
         "GENE": "3gmxqqfQhMtqAnQWuFNiTqgLkAok54SGuvdncPYEAq2i",
         "GMT": "EPm5gyRafEZMHijXuyoA5imPFoEir8KsJ9fd2cyEFrPU",
         "GST": "9CwVAjhpKqkPA27GsikXHxQQgG3oJiiF1ybkcC1pZtGf",
@@ -506,8 +511,7 @@
         "stSOL": "BsCdKC2ncgS3VnuibTiA5Etx6MZGRnUL2w88iDee3A6Z",
         "wALEPH": "7MicHAbktN1AmuuBxUGpdmb4iqeiD9GqduejMAX9g415",
         "wUST": "8s5Gc63C8zUYRHXxjqyyNwXzK4fqQidcjx5a43Rmf54v",
-        "wbWBNB": "Fbe9bgforFZfK1Zf14R4S2EasUimk64JRUi1hgJZXf26",
-        "whETH": "7n9bDFUxehuw7yAHnK9eWKSfMx5u6NYWPVLKYnz93fzj"
+        "wbWBNB": "Fbe9bgforFZfK1Zf14R4S2EasUimk64JRUi1hgJZXf26"
       },
       "reserveAuthority": "8gEGZbUfVE1poBq71VHKX9LU7ca4x8wTUyZgcbyQe51s"
     }
@@ -516,6 +520,7 @@
     "bestApy": {
       "daoTreasuryLpTokenAccount": {
         "BTC": "FHesgs3r6r1HmWNZ3zC4QY7J1bGDboyuNDrq2aRCAvmK",
+        "ETH": "6YKWTpEAfC82ysZwxuGgAHHgfaNooPHzifJts8MYjmpH",
         "MNGO": "D6uU6DLvwhtwv99RVfuynvkyiBxqStDS3j3CMSca7Nx7",
         "ORCA": "9eHqpDBtCG2irv51BmT6WY4dYyrPe3Rv2PYdpDQVio5J",
         "RAY": "GATpdUVR97CN6DqCkjZFjuHF6M4FU3efFxCxjHrSrTEY",
@@ -531,6 +536,7 @@
       "programId": "GGo1dnYpjKfe9omzUaFtaCyizvwpAMf3NhxSCMD61F3A",
       "vaultAccount": {
         "BTC": "FvqYV2Cg7s7iWKUBTWkyybKuz1m85ny6ijDqDXEXVyNv",
+        "ETH": "u11s7BKVbYncjcMJX2HjKeahfRuzNovQWtcpJhCTP1x",
         "MNGO": "E5znWeT1pEiMXpko8JUNvGfs1X6cuupHZB2PeDhx5mt8",
         "ORCA": "9b2J1JjsvnkLc9ZQmARDbq7EMhCDzr4QG4fAR6TfZkTK",
         "RAY": "6w6NRsDUnBieNiVBHoixEqqfGnr2wXdoSWWZRn7S36db",
@@ -545,6 +551,7 @@
       },
       "vaultFranciumCollateralTokenAccount": {
         "BTC": "8cj9EY46ZSwzpR45H4T7GMcnpJjk1uzjnCz3ErBesBrR",
+        "ETH": "3ewT972Z9BFokhrNt5uTg3AdFBVKiHjskCahve3Ts2fF",
         "ORCA": "FtAHx5hVfDCv9TjrSAS3KEGF13Lf3SXBAXWPo6HCGv23",
         "RAY": "2NHPhWVGAwmpMougfy6ddN94vkkng9jGNLcatK7o73SV",
         "SAMO": "DqeVaEQGwvrg1UGACMbAEJBnaSZ2upXL1MmydweMZWEj",
@@ -558,6 +565,7 @@
       },
       "vaultInputTokenAccount": {
         "BTC": "HU5UkPm69aw2mhK4V2oxWy3mQgTAqQHUesoZWQCVjPVD",
+        "ETH": "FLmVErVNghUUmmSYyWakWhG2gzweYEZMTp7izBefy53z",
         "MNGO": "gujNd9ZTMRuKKHVigat4kqFtaEfNvEZjjLn7nNDW3QE",
         "ORCA": "FdiZfYpiwoUigbbMoKTbFbaZKHRSh4uuQXhN6Y41UNya",
         "RAY": "HPxU37mc9varUSjj8JaJQ4orKSvY4tSc5Zdg1UaeW1jq",
@@ -576,6 +584,7 @@
       },
       "vaultLpTokenMintAddress": {
         "BTC": "Er1sCVW55YH6gMTc8HdvZwZ9YrWksLAso6HtA3knXBKU",
+        "ETH": "F4zGYuYWhgZPfaucbsuJEfgFxPsDP92FTVEUnidzjz1B",
         "MNGO": "GfSggsLj9ZcYcHxanX85d7nas7s1GJPMuDgMCWDhoi7Z",
         "ORCA": "898Vy3qq3pMRbAXpznFkYSDv5tK4hrN8ufAUuKkZHMXa",
         "RAY": "GAsp3xeG4LQLjyJnT7ochh9gKaF17c7ssTjjPS8B1mQv",
@@ -601,6 +610,7 @@
       },
       "vaultPortCollateralTokenAccount": {
         "BTC": "HBu3fAc2GNtpLQDksbbJXNTQkXgs4cg6SwdosaBXsJPn",
+        "ETH": "2P1HsRNrpzhSrnDneNYWDAAx1h7YsRzZanqFSAAFyHzf",
         "SRM": "4sEh494MTJFtyjAxEuN7cL6dxks5kfPzjUsT342DQg7A",
         "USDC": "3GRkHdRwQxVYUejBNoU52dTNJUPt4UAqsHhYuEw5Puu8",
         "USDT": "DKH7fniATpoVKJgGqTuqiJNqvrisfVr5wa92WUXndnPu",
@@ -611,6 +621,7 @@
       },
       "vaultSolendCollateralTokenAccount": {
         "BTC": "vZyd47d1Ycpf7UPMm2Wur9AbsUhnj8XkJ1aVPoL1Z8z",
+        "ETH": "Gsn7HxQm47kZazHwAGZWsvK3Ms5n7vfq6FFZNB6LrCYU",
         "ORCA": "DAGBJTs5Yko6dyiDDj87EysquYymT9AnWcAhVp2c279r",
         "RAY": "2dN8TDEMhbTezC8TkK4uMqR1VGTCYMMf5dshxTzpRoRV",
         "SRM": "sefAx9vUsTmsfNXgtLsNSnfYDnUtDGTMG4WN5hW3SGa",
@@ -631,6 +642,7 @@
       },
       "vaultTulipCollateralTokenAccount": {
         "BTC": "H1HS5hUj13SFirjp2QNh6Rpk16yyMe4qYh8zk8P3BNQa",
+        "ETH": "5SYXNALEuqhnX1fG3mVUYwXCEQt6YXK3vKUGBRebucS8",
         "ORCA": "4dMnrQmMHARA8eYC7MaybCb8rojvH8oevzSjzHkSoKqe",
         "RAY": "5P6DshcBagjx5HEhf8nzcrsz4nhqXLXa4eFkHAnKyhEC",
         "SAMO": "FGRnurR83fgKrxJawmARxVRWvsk9uck7ZqdxzFJ6BCEK",

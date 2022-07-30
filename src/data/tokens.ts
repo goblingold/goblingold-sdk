@@ -87,6 +87,13 @@ export const TOKENS: Tokens = {
     decimals: 9,
     decimalsE: 1e9,
   },
+  ETH: {
+    symbol: "ETH",
+    name: "Ether (Portal)",
+    mintAddress: "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs",
+    decimals: 8,
+    decimalsE: 1e8,
+  },
   SRM: {
     symbol: "SRM",
     name: "Serum",
@@ -219,6 +226,13 @@ export const TOKENS: Tokens = {
     mintAddress: "3B3JE2wSp1oV98tLTmZZDZXJzc2J4qSZmSXC4ZvHqhT4",
     decimals: 9,
     decimalsE: 1e9,
+  },
+  ggETH: {
+    symbol: "ggETH",
+    name: "ggETH",
+    mintAddress: "F4zGYuYWhgZPfaucbsuJEfgFxPsDP92FTVEUnidzjz1B",
+    decimals: 8,
+    decimalsE: 1e8,
   },
 };
 

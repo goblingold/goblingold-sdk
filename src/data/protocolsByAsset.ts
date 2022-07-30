@@ -73,4 +73,6 @@ export const PROTOCOLS_BY_ASSET: Record<string, Protocols[]> = {
   ORCA: [Protocols.Solend, Protocols.Tulip, Protocols.Francium],
 
   SAMO: [Protocols.Tulip, Protocols.Francium],
+
+  ETH: [Protocols.Solend, Protocols.Port, Protocols.Tulip, Protocols.Francium],
 };
