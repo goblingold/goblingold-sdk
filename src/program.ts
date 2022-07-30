@@ -868,7 +868,7 @@ export class StrategyProgram extends TokenProgram {
 
   async assetsDeposited(): Promise<DepositedAssets[]> {
     const vaultAccounts = await this.decodeVaults();
-    let deposited: DepositedAssets[] = [];
+    const deposited: DepositedAssets[] = [];
     let i = 0;
     // decoded in the same order than TOKENS keys (if pubkey exists)
     for (const token of Object.keys(TOKENS)) {
