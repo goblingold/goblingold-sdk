@@ -1,6 +1,6 @@
 {
   "name": "goblingold-sdk",
-  "version": "1.2.46",
+  "version": "1.2.48",
   "description": "GoblinGold TypeScript Client Library",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -31,6 +31,7 @@
     "@solana/spl-token": "^0.1.8",
     "@solana/spl-token-v2": "npm:@solana/spl-token@0.2.0",
     "@solana/web3.js": "^1.42.0",
+    "hedge-web3": "^0.2.22",
     "isomorphic-unfetch": "^3.1.0",
     "sha256-uint8array": "^0.10.3",
     "typescript": "^4.6.2"
