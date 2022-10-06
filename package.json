@@ -1,6 +1,6 @@
 {
   "name": "goblingold-sdk",
-  "version": "1.2.48",
+  "version": "1.2.50",
   "description": "GoblinGold TypeScript Client Library",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

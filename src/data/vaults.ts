@@ -134,25 +134,6 @@ const btcStrategyBestAPY: StrategyVault = {
     "The protocols being used underneath (although being audited) present some risks. No audit has been done for the current strategy. Use it at your own risk.",
 };
 
-const soEthStrategyBestAPY: StrategyVault = {
-  type: "bestApy",
-  name: "Best APY",
-  input: TOKENS.soETH,
-  lp: TOKENS.ggsoETH,
-  vaultAccount: new anchor.web3.PublicKey(
-    "B7TjXfMHG6sun7KdGFb4sWVCKikTKuaYitbosKc37vVf"
-  ),
-  tvl: new anchor.BN(0),
-  supply: new anchor.BN(0),
-  apy: "0",
-  apr: "0",
-  aboutTxt:
-    "This strategy automatically rebalances between different lending protocols in order to get the maximum yield in each period.",
-  protocolsTxt: "Mango, Tulip, Solend and Francium",
-  risksTxt:
-    "The protocols being used underneath (although being audited) present some risks. No audit has been done for the current strategy. Use it at your own risk.",
-};
-
 const stSOLStrategyBestAPY: StrategyVault = {
   type: "bestApy",
   name: "Best APY",
@@ -292,7 +273,6 @@ export const STRATEGY_VAULTS: StrategyVault[] = [
   msolStrategyBestAPY,
   usdtStrategyBestAPY,
   btcStrategyBestAPY,
-  soEthStrategyBestAPY,
   stSOLStrategyBestAPY,
   srmStrategyBestAPY,
   mngoStrategyBestAPY,
