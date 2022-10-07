@@ -290,20 +290,20 @@
       },
       "switchboardPriceFeedOracleAccount": {
         "BTC": "74YzQPGUT9VnjrBz8MuyDLKgKpbDqGot5xZJvTtMi6Ng",
-        "ETH": "QJc2HgGhdtW4e7zjvLB1TGRuwEpTre2agU5Lap2UqYz",
+        "ETH": "HNStfhaLnqwF2ZtJUizaA9uHDAVB976r2AgTUx9LrdEo",
         "MER": "5pHX3fd81SpGywzsw4R12L3Xu3qd418h1PcnHpQAiMWA",
         "ORCA": "7ySvXU4NSxBuuQZj3pG5qwqNTepMFa8XQNLGivM4qkEy",
         "RAY": "2oALNZVi5czyHvKbnjE4Jf2gR7dNp1FBpEGaq4PzVAf7",
         "SBR": "Lp3VNoRQi699VZe6u59TV8J38ELEUzxkaisoWsDuJgB",
         "SLND": "7QKyBR3zLRhoEH5UMjcG8emDD2J2CCDmkxv3qsa2Mqif",
-        "SRM": "BAoygKcKN7wk8yKzLD6sxzUQUqLvhBV1rjMA4UJqfZuH",
+        "SRM": "CUgoqwiQ4wCt6Tthkrgx5saAEpLBjPCdHshVa4Pbfcx2",
         "USDC": "BjUgj6YCnFBZ49wF54ddBVA9qu8TeqkFtkbqmZcee8uW",
         "USDT": "ETAaeeuQBwsh9mC2gCov9WdhJENZuffRMXY2HgjCcSL9",
         "UST": "8o8gN6VnW45R8pPfQzUJUwJi2adFmsWwfGcFNmicWt61",
         "WSOL": "GvDMxPzN1sCj7L26YDK2HnMRXEQmQ2aemov8YBtPS7vR",
         "mSOL": "CEPVH2t11KS4CaL3w4YxT9tRiijoGA4VEbnQ97cEpDmQ",
         "scnSOL": "DpzEKDSszosuzRUdRYzEcEbt6iZ4xhVEANQSRAYDYw8h",
-        "soETH": "QJc2HgGhdtW4e7zjvLB1TGRuwEpTre2agU5Lap2UqYz",
+        "soETH": "HNStfhaLnqwF2ZtJUizaA9uHDAVB976r2AgTUx9LrdEo",
         "soFTT": "6SqRewrr5f4ycWy7NvLmNgpXJbhwXrtTc1erL9aq2gP3",
         "stSOL": "9r2p6vyF8Wp5YB2DASK95yuXEakQth6wmUmV2DpH91WX"
       }
@@ -351,9 +351,9 @@
       "switchboardPriceFeedOracleAccount": {
         "CASH": "EctBbFDkojNs7U4Nm6G5k3HUiLUi1vaS89n2iog1c4bL",
         "PAI": "G26LmGqGvoggYQm2zEKD15rL4LutkZFrtP8mRPd6gPjk",
-        "USDC": "CZx29wKMUxaJDq6aLVQTdViPL754tTR64NAgQBUGxxHb",
+        "USDC": "BjUgj6YCnFBZ49wF54ddBVA9qu8TeqkFtkbqmZcee8uW",
         "USDH": "37NFcKPTgqUVx3gwTQ4c2Q94oJWk2xZy3NQUXtDixReb",
-        "USDT": "5mp8kbkTYwWWCsKSte8rURjTuyinsqBpJ9xAQsewPDD",
+        "USDT": "ETAaeeuQBwsh9mC2gCov9WdhJENZuffRMXY2HgjCcSL9",
         "UST": "8o8gN6VnW45R8pPfQzUJUwJi2adFmsWwfGcFNmicWt61",
         "UXS": "Lj3y2beRYhCaQQH9SYjmMJv3uuTcqpCJjQYe4829FAL"
       }
