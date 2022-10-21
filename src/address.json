@@ -141,7 +141,9 @@
         "mSOL": "5v7hcK6qrU7NFbbXdNGjTjc89m4tNDyEYCW5BPhWr1Da",
         "soETH": "9ZLpGUxuUwsGyi2RWKS5eY2UVVFx46qAyKdd1pbgyoxj",
         "soFTT": "5hd8hpjAF1s4H7HpPX1gj447sSENhPoWtQQMCRGyYNkw"
-      }
+      },
+      "reimbursementProgram": "m3roABq4Ta3sGyFRLdY4LH1KN16zBtg586gJ3UxoBzb",
+      "table":"45F9oyj2Jr5pfz1bLoupLGujXkamZEy3RXeKBZudKmJw"
     },
     "port": {
       "lendingMarketAccount": "6T4XxKerq744sSuj3jaoV6QiZ8acirf4TrPwQzHAoSy5",

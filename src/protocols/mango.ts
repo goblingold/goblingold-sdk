@@ -5,7 +5,7 @@ import { createHash } from "sha256-uint8array";
 import { addressParser } from "../addressParser";
 import { StrategyProgram } from "../program";
 import { Protocols } from "../protocols";
-
+import { TOKEN_PROGRAM_ID } from "@solana/spl-token-v2";
 const mangoKeysAll = addressParser({
   group: "protocols",
   name: "mango",
@@ -166,6 +166,46 @@ export async function tvl(
       mangoCacheAccount: mangoKeys.cacheAccount,
       mangoRootBankAccount: mangoKeys.rootBankAccount,
       defaultPubkey: web3.PublicKey.default,
+    })
+    .transaction();
+}
+
+export async function mangoReimbursement(
+  program: StrategyProgram,
+  tokenMint: web3.PublicKey,
+  tokenIndex: number,
+  indexIntoTable: number
+): Promise<web3.Transaction> {
+  const tokenInput = program.tokenInput;
+  const vaultKeys = program.vaultKeys[tokenInput];
+  const mangoKeys = mangoKeysAll[tokenInput];
+
+  const [reimbursementAccount, _bump] = await web3.PublicKey.findProgramAddress(
+    [
+      Buffer.from("ReimbursementAccount"),
+      mangoKeys.group.toBuffer(),
+      mangoKeys.vaultAccount.toBuffer(),
+    ],
+    mangoKeys.reimbursementProgram
+  );
+
+  return program.methods
+    .mangoReimbursement(new BN(tokenIndex), new BN(indexIntoTable))
+    .accounts({
+      userSigner: program.user,
+      group: mangoKeys.group,
+      claimMint: tokenMint,
+      vaultTokenAccount: vaultKeys.vaultMangoAccount,
+      tokenAccount: vaultKeys.vaultInputTokenAccount,
+      reimbursementAccount,
+      mangoAccountOwner: mangoKeys.vaultAccount,
+      claimMintTokenAccount: vaultKeys.vaultInputTokenAccount,
+      table: mangoKeys.table,
+      vaultAccount: vaultKeys.vaultAccount,
+
+      systemProgram: web3.SystemProgram.programId,
+      tokenProgram: TOKEN_PROGRAM_ID,
+      rent: web3.SYSVAR_RENT_PUBKEY,
     })
     .transaction();
 }
