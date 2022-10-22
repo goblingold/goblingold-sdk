@@ -144,11 +144,13 @@
       },
       "reimbursementVault": {
         "USDC": "2c9x2g7VUwCd9ppHDV6LxJ1YDb1799MXwvp9SKJe8YXm",
-        "WSOL": "2c9x2g7VUwCd9ppHDV6LxJ1YDb1799MXwvp9SKJe8YXm"
+        "WSOL": "3Rr5y3ef1KESbkho7x4TeerkKGYqgATaojxPbgtaM2uj",
+        "MNGO": "82BSXokLXRTB7Knm1ZZp2dA5iADotNzvdMuQDEmhHwoX"
       },
       "claimMint": {
         "USDC": "2u3wLVR6EY2P3Pkvcy7uDXdb6gjq5ks9AwrfJ2z6tB2t",
-        "WSOL": "2u3wLVR6EY2P3Pkvcy7uDXdb6gjq5ks9AwrfJ2z6tB2t"
+        "WSOL": "2VyscLY9Dr6xSXVNGw8HkHb4YtqXTmF9vUuVHuKdDjg8",
+        "MNGO": "C8TnPp5ZJ6j5nCdE1VueHTV9vM6rZAgxn2thsXx79JsF"
       },
       "reimbursementProgram": "m3roABq4Ta3sGyFRLdY4LH1KN16zBtg586gJ3UxoBzb",
       "table":"45F9oyj2Jr5pfz1bLoupLGujXkamZEy3RXeKBZudKmJw",
