@@ -142,6 +142,12 @@
         "soETH": "9ZLpGUxuUwsGyi2RWKS5eY2UVVFx46qAyKdd1pbgyoxj",
         "soFTT": "5hd8hpjAF1s4H7HpPX1gj447sSENhPoWtQQMCRGyYNkw"
       },
+      "reimbursementVault": {
+        "USDC": "2c9x2g7VUwCd9ppHDV6LxJ1YDb1799MXwvp9SKJe8YXm"
+      },
+      "claimMint": {
+        "USDC": "2u3wLVR6EY2P3Pkvcy7uDXdb6gjq5ks9AwrfJ2z6tB2t"
+      },
       "reimbursementProgram": "m3roABq4Ta3sGyFRLdY4LH1KN16zBtg586gJ3UxoBzb",
       "table":"45F9oyj2Jr5pfz1bLoupLGujXkamZEy3RXeKBZudKmJw",
       "reimbursementGroup": "E3ZucWEddfWaDYUXVQbJYRYD9oNHUsWNkFVW73Y2by52"
