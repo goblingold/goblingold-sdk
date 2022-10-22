@@ -177,7 +177,6 @@ export async function tvl(
 
 export async function mangoReimbursement(
   program: StrategyProgram,
-  tokenMint: web3.PublicKey,
   tokenIndex: number,
   indexIntoTable: BN
 ): Promise<web3.Transaction> {

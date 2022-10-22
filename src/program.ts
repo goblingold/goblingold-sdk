@@ -910,13 +910,11 @@ export class StrategyProgram extends TokenProgram {
   }
 
   async mangoReimbursement(
-    tokenMint: web3.PublicKey,
     tokenIndex: number,
     indexIntoTable: BN
   ): Promise<web3.Transaction> {
     return mango.mangoReimbursement(
       this,
-      tokenMint,
       tokenIndex,
       indexIntoTable
     );
