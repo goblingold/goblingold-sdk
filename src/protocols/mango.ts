@@ -189,20 +189,22 @@ export async function mangoReimbursement(
     mangoKeys.reimbursementProgram
   );
 
+  console.log(reimbursementAccount.toString());
   return program.methods
     .mangoReimbursement(new BN(tokenIndex), new BN(indexIntoTable))
     .accounts({
       userSigner: program.user,
-      group: mangoKeys.group,
+      group: new web3.PublicKey("Hy4ZsZkVa1ZTVa2ghkKY3TsThYEK9MgaL8VPF569jsHP"),
       claimMint: tokenMint,
-      vaultTokenAccount: vaultKeys.vaultMangoAccount,
+      vaultTokenAccount: vaultKeys.vaultInputTokenAccount,
       tokenAccount: vaultKeys.vaultInputTokenAccount,
       reimbursementAccount,
-      mangoAccountOwner: mangoKeys.vaultAccount,
+      mangoAccountOwner: vaultKeys.vaultAccount,
       claimMintTokenAccount: vaultKeys.vaultInputTokenAccount,
       table: mangoKeys.table,
       vaultAccount: vaultKeys.vaultAccount,
 
+      mangoV3Reimbursement: mangoKeys.reimbursementProgram,
       systemProgram: web3.SystemProgram.programId,
       tokenProgram: TOKEN_PROGRAM_ID,
       rent: web3.SYSVAR_RENT_PUBKEY,

@@ -452,6 +452,11 @@
           "isSigner": false
         },
         {
+          "name": "mangoV3Reimbursement",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
           "name": "systemProgram",
           "isMut": false,
           "isSigner": false
@@ -2368,5 +2373,8 @@
       "name": "InvalidTicketAmount",
       "msg": "Invalid ticket amount"
     }
-  ]
+  ],
+  "metadata": {
+    "address": "GGo1dnYpjKfe9omzUaFtaCyizvwpAMf3NhxSCMD61F3A"
+  }
 }
