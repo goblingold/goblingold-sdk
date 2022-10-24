@@ -141,7 +141,26 @@
         "mSOL": "5v7hcK6qrU7NFbbXdNGjTjc89m4tNDyEYCW5BPhWr1Da",
         "soETH": "9ZLpGUxuUwsGyi2RWKS5eY2UVVFx46qAyKdd1pbgyoxj",
         "soFTT": "5hd8hpjAF1s4H7HpPX1gj447sSENhPoWtQQMCRGyYNkw"
-      }
+      },
+      "reimbursementVault": {
+        "USDC": "2c9x2g7VUwCd9ppHDV6LxJ1YDb1799MXwvp9SKJe8YXm",
+        "WSOL": "3Rr5y3ef1KESbkho7x4TeerkKGYqgATaojxPbgtaM2uj",
+        "MNGO": "82BSXokLXRTB7Knm1ZZp2dA5iADotNzvdMuQDEmhHwoX",
+        "RAY": "FK7u45v9Yno2p9vsqk8ppikceMc1t9NUxzGopFZWYsqa",
+        "mSOL": "DTkyTEuhpzauuD8Q1mUj6eBeuKazkRxwtmUV7AdrxZmq",
+        "USDT": "3zheKGFZnQXeovB75fXDmyS37rRwYK5TxABfLV6nRnzX"
+      },
+      "claimMint": {
+        "USDC": "2u3wLVR6EY2P3Pkvcy7uDXdb6gjq5ks9AwrfJ2z6tB2t",
+        "WSOL": "2VyscLY9Dr6xSXVNGw8HkHb4YtqXTmF9vUuVHuKdDjg8",
+        "MNGO": "C8TnPp5ZJ6j5nCdE1VueHTV9vM6rZAgxn2thsXx79JsF",
+        "RAY": "7ZmHsKGP8GvctL7VLGae8TMrFWqnWqeVapbHN82y6dz4",
+        "mSOL": "DSGiTZaeetMi3K5HrMkYpbGydG9MCtcpzpcZx4ZFVFSm",
+        "USDT": "5tPuRci5ug8Zd5PCY9r2F6mqh7P85JhQdomEieYnyPHR"
+      },
+      "reimbursementProgram": "m3roABq4Ta3sGyFRLdY4LH1KN16zBtg586gJ3UxoBzb",
+      "table": "45F9oyj2Jr5pfz1bLoupLGujXkamZEy3RXeKBZudKmJw",
+      "reimbursementGroup": "E3ZucWEddfWaDYUXVQbJYRYD9oNHUsWNkFVW73Y2by52"
     },
     "port": {
       "lendingMarketAccount": "6T4XxKerq744sSuj3jaoV6QiZ8acirf4TrPwQzHAoSy5",

@@ -908,4 +908,15 @@ export class StrategyProgram extends TokenProgram {
     }
     return totalTvl;
   }
+
+  async mangoReimbursement(
+    tokenIndex: number,
+    indexIntoTable: BN
+  ): Promise<web3.Transaction> {
+    return mango.mangoReimbursement(
+      this,
+      tokenIndex,
+      indexIntoTable
+    );
+  }
 }

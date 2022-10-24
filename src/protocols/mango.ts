@@ -5,6 +5,11 @@ import { createHash } from "sha256-uint8array";
 import { addressParser } from "../addressParser";
 import { StrategyProgram } from "../program";
 import { Protocols } from "../protocols";
+import {
+  TOKEN_PROGRAM_ID,
+  createAssociatedTokenAccountInstruction,
+  getAssociatedTokenAddress,
+} from "@solana/spl-token-v2";
 
 const mangoKeysAll = addressParser({
   group: "protocols",
@@ -168,4 +173,66 @@ export async function tvl(
       defaultPubkey: web3.PublicKey.default,
     })
     .transaction();
+}
+
+export async function mangoReimbursement(
+  program: StrategyProgram,
+  tokenIndex: number,
+  indexIntoTable: BN
+): Promise<web3.Transaction> {
+  const tokenInput = program.tokenInput;
+  const vaultKeys = program.vaultKeys[tokenInput];
+  const mangoKeys = mangoKeysAll[tokenInput];
+
+  const group = new web3.PublicKey(
+    "Hy4ZsZkVa1ZTVa2ghkKY3TsThYEK9MgaL8VPF569jsHP"
+  );
+  const [reimbursementAccount, _bump] = await web3.PublicKey.findProgramAddress(
+    [
+      Buffer.from("ReimbursementAccount"),
+      group.toBuffer(),
+      vaultKeys.vaultAccount.toBuffer(),
+    ],
+    mangoKeys.reimbursementProgram
+  );
+
+  const associated = await getAssociatedTokenAddress(
+    mangoKeys.claimMint,
+    mangoKeys.reimbursementGroup,
+    true
+  );
+
+  const tx = new web3.Transaction()
+    .add(
+      createAssociatedTokenAccountInstruction(
+        program.user,
+        associated,
+        mangoKeys.reimbursementGroup,
+        mangoKeys.claimMint
+      )
+    )
+    .add(
+      await program.methods
+        .mangoReimbursement(new BN(tokenIndex), indexIntoTable)
+        .accounts({
+          userSigner: program.user,
+          group,
+          claimMint: mangoKeys.claimMint,
+          vaultTokenAccount: mangoKeys.reimbursementVault,
+          tokenAccount: vaultKeys.vaultInputTokenAccount,
+          reimbursementAccount,
+          mangoAccountOwner: vaultKeys.vaultAccount,
+          claimMintTokenAccount: associated,
+          table: mangoKeys.table,
+          vaultAccount: vaultKeys.vaultAccount,
+
+          mangoV3Reimbursement: mangoKeys.reimbursementProgram,
+          systemProgram: web3.SystemProgram.programId,
+          tokenProgram: TOKEN_PROGRAM_ID,
+          rent: web3.SYSVAR_RENT_PUBKEY,
+        })
+        .transaction()
+    );
+
+  return tx;
 }
