@@ -247,6 +247,7 @@
     buffer "~6.0.3"
 
 "@solana/spl-token-v2@npm:@solana/spl-token@0.2.0", "@solana/spl-token@^0.2.0":
+  name "@solana/spl-token-v2"
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@solana/spl-token/-/spl-token-0.2.0.tgz#329bb6babb5de0f9c40035ddb1657f01a8347acd"
   integrity sha512-RWcn31OXtdqIxmkzQfB2R+WpsJOVS6rKuvpxJFjvik2LyODd+WN58ZP3Rpjpro03fscGAkzlFuP3r42doRJgyQ==
@@ -268,7 +269,7 @@
     buffer-layout "^1.2.0"
     dotenv "10.0.0"
 
-"@solana/web3.js@^1.17.0", "@solana/web3.js@^1.21.0", "@solana/web3.js@^1.32.0", "@solana/web3.js@^1.36.0", "@solana/web3.js@^1.37.0", "@solana/web3.js@^1.42.0":
+"@solana/web3.js@^1.17.0", "@solana/web3.js@^1.21.0", "@solana/web3.js@^1.32.0", "@solana/web3.js@^1.36.0", "@solana/web3.js@^1.42.0", "@solana/web3.js@^1.63.1":
   version "1.66.2"
   resolved "https://registry.yarnpkg.com/@solana/web3.js/-/web3.js-1.66.2.tgz#80b43c5868b846124fe3ebac7d3943930c3fa60c"
   integrity sha512-RyaHMR2jGmaesnYP045VLeBGfR/gAW3cvZHzMFGg7bkO+WOYOYp1nEllf0/la4U4qsYGKCsO9eEevR5fhHiVHg==
@@ -1624,16 +1625,16 @@ has@^1.0.3:
     function-bind "^1.1.1"
 
 hedge-web3@^0.2.22:
-  version "0.2.28"
-  resolved "https://registry.yarnpkg.com/hedge-web3/-/hedge-web3-0.2.28.tgz#a1806da9c4a4ca7b6f5fd87ad23f0832c2d66314"
-  integrity sha512-SdhJgxtL1b9Gzbd8d+JKKn23bgX/ijl90LitK4012gk9CSAyEw7lklDO8A0DPyPJcZg4rdmBoJbVAskn9nDbXw==
+  version "0.2.31"
+  resolved "https://registry.yarnpkg.com/hedge-web3/-/hedge-web3-0.2.31.tgz#3b3f479ad163be9eadd333136a0aacdeda4d8d91"
+  integrity sha512-UKOkvQeBHNdfeS+LjGC85uiG1aDhhpSPZGzjQT3VFKL8G1EskFdKUq514b7ZPkehxjVEMWL4dEJBKLLDtK6VbQ==
   dependencies:
     "@project-serum/anchor" "0.24.2"
     "@project-serum/serum" "^0.13.61"
     "@rollup/plugin-typescript" "^8.3.0"
     "@solana/buffer-layout" "^4.0.0"
     "@solana/spl-token" "^0.2.0"
-    "@solana/web3.js" "^1.37.0"
+    "@solana/web3.js" "^1.63.1"
     "@types/bn.js" "^5.1.0"
     "@types/underscore" "^1.11.4"
     "@types/uuid" "^8.3.4"
