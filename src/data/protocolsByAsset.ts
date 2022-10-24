@@ -2,7 +2,6 @@ import { Protocols } from "../protocols";
 
 export const PROTOCOLS_BY_ASSET: Record<string, Protocols[]> = {
   WSOL: [
-    Protocols.Mango,
     Protocols.Solend,
     Protocols.Port,
     Protocols.Tulip,
@@ -10,7 +9,6 @@ export const PROTOCOLS_BY_ASSET: Record<string, Protocols[]> = {
   ],
 
   mSOL: [
-    Protocols.Mango,
     Protocols.Solend,
     Protocols.Port,
     Protocols.Tulip,
@@ -19,7 +17,6 @@ export const PROTOCOLS_BY_ASSET: Record<string, Protocols[]> = {
   ],
 
   USDC: [
-    Protocols.Mango,
     Protocols.Solend,
     Protocols.Port,
     Protocols.Tulip,
@@ -28,7 +25,6 @@ export const PROTOCOLS_BY_ASSET: Record<string, Protocols[]> = {
   ],
 
   USDT: [
-    Protocols.Mango,
     Protocols.Solend,
     Protocols.Port,
     Protocols.Tulip,
@@ -37,7 +33,6 @@ export const PROTOCOLS_BY_ASSET: Record<string, Protocols[]> = {
   ],
 
   BTC: [
-    Protocols.Mango,
     Protocols.Solend,
     Protocols.Port,
     Protocols.Tulip,
@@ -45,21 +40,17 @@ export const PROTOCOLS_BY_ASSET: Record<string, Protocols[]> = {
   ],
 
   soETH: [
-    Protocols.Mango,
     Protocols.Solend,
     Protocols.Tulip,
     Protocols.Francium,
   ],
 
   SRM: [
-    Protocols.Mango,
     Protocols.Solend,
     Protocols.Port,
     Protocols.Tulip,
     Protocols.Francium,
   ],
-
-  MNGO: [Protocols.Mango],
 
   stSOL: [
     Protocols.Solend,
